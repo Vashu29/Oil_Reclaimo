@@ -13,12 +13,22 @@
     />
     <link rel="stylesheet" href="style.css"/>
     <title>Oil Reclaimo</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("-rQCZRYSSzNiY67UK");
+        })();
+    </script>
 </head>
 <body>
     <nav>
         <div class="nav__header">
-            <div class="nav__logo">
-                <a href="#" class="logo">Oil Reclaimo</a>
+            <div class="nav__logo" style="display: flex;">
+                <img src="assets/reclaimo_logo.PNG" style="width: 42px; height: 42px;"/>
+                <a href="#" class="logo">&nbsp;Reclaimo</a>
             </div>
             <div class="nav__menu__btn" id="menu-btn">
                 <i class="ri-menu-line"></i>
@@ -27,13 +37,13 @@
         <ul class="nav__links" id="nav-links">
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
-            <li><a href="#tour">TOUR</a></li>
-            <li><a href="#package">PACKAGE</a></li>
+            <li><a href="#tour">PROCESS</a></li>
+            <li><a href="#package">MORE</a></li>
             <li><a href="#contact">CONTACT</a></li>
-            <li><a href="#">BOOK A Demo</a></li>
+            <li><a href="login.html">SIGN UP / SIGN IN</a></li>
         </ul>
         <div class="nav__btns">
-            <button class="btn">BOOK A DEMO</button>
+            <button class="btn"><a href="signup.html" style="color: white;">SIGN UP / SIGN IN</a></button>
         </div>
     </nav>
 
@@ -43,7 +53,7 @@
                 <p>ELEVATE YOUR OIL QUALITY</p>
                 <h1>Experience The Magic Of Reclaimo</h1>
                 <div class="header__btns">
-                    <button class="btn">Book A Meeting</button>
+                    <button class="btn"><a href="#contact">Book a Demo</a></button>
                     <a href="#">
                         <span><i class="ri-play-circle-fill"></i></span>
                     </a>
@@ -56,18 +66,54 @@
     </header>
 
     <section class="section__container destination__container" id="about">
-        <h2 class="section__header">Popular States taking Our Services</h2>
+        <h2 class="section__header">Popular States & Cities taking Our Services</h2>
         <p class="section__description">
-            Now its your's turn to be part of our Services
+            <b>1.North India:</b>
+
+New Delhi,
+Noida,
+Gurugram,
+Chandigarh,
+Ludhiana,
+Amritsar,
+Dehradun,
+Haridwar,
+Rishikesh,
+Roorkee,
+Saharanpur,
+Lucknow,
+Kanpur,
+Varanasi,
+Jaipur
+<br><br>
+<b>West India:</b>
+ Mumbai
+ Pune
+ Nagpur
+ Ahmedabad
+ Surat
+ Vadodara
+ Rajkot
+ <br><br>
+ <b>South India:</b>
+ Bengaluru
+ Hyderabad
+ Chennai
+ Coimbatore
+ Kochi
+ Mangalore
+ Visakhapatnam
+
+            <br><br>Now its your's turn to be part of our Services.
         </p>
 
         <div class="destination__grid">
             <div class="destination__card">
-                <img src="assets/rajasthan.png" alt="destination" />
+                <img src="assets/dehradun.jpg" alt="destination" />
                 <div class="destination__card__details">
                     <div>
-                        <h4>The Pink City (18+ Shops)</h4>
-                        <p><b>Rajasthan, India</b><br> We provide trusted oil refining services across Jaipur and Rajasthan, helping local shops improve oil purity, extend shelf life, and maintain quality standards for healthier customer experiences.</p>
+                        <h4>Dehradun, Haridwar, Rishikesh(14+ Shops)</h4>
+                        <p><b>Uttarakhand India</b><br>Serving Dehradun’s vibrant local markets and food industries with reliable oil refining solutions, helping shops deliver cleaner, healthier, and longer-lasting oils to support quality and sustainability in every kitchen.</p>
                     
                     </div>
                     <div class="destination__rating">
@@ -80,8 +126,8 @@
                 <img src="assets/gurugram.png" alt="destination" />
                 <div class="destination__card__details">
                     <div>
-                        <h4>The Cyber City (25+ Shops)</h4>
-                        <p><b>Gurugram, India</b><br>Supporting Gurugram’s fast-paced markets with advanced oil refining services. We ensure shops maintain top quality oils, enhancing taste, hygiene, and sustainability for both local kitchens and commercial businesses.</p>
+                        <h4>The Cyber City (6+ Shops)</h4>
+                        <p><b>Gurugram, Haryana, India</b><br>Supporting Gurugram’s fast-paced markets with advanced oil refining services. We ensure shops maintain top quality oils, enhancing taste, hygiene, and sustainability for both local kitchens and commercial businesses.</p>
                     </div>
                     <div class="destination__rating">
                         <span><i class="ri-star-fill"></i></span>
@@ -90,11 +136,12 @@
                 </div>
             </div>
             <div class="destination__card">
-                <img src="assets/pune.png" alt="destination" />
+                <img src="assets/rajasthan.png" alt="destination" />
                 <div class="destination__card__details">
                     <div>
-                        <h4>Oxford of the East (37+ Shops)</h4>
-                        <p><b>Pune, Maharashtra, India</b><br>Serving Pune’s growing food and retail hubs with expert oil refining solutions, ensuring local shops deliver healthier, cleaner, and longer-lasting oils to meet evolving customer needs.</p>
+                        <h4>The Pink City (8+ Shops)</h4>
+                        <p><b>Jaipur, Rajasthan, India</b><br>
+                            We provide trusted oil refining services across Jaipur and Rajasthan, helping local shops improve oil purity, extend shelf life, and maintain quality standards for healthier customer experiences.</p>
                     </div>
                     <div class="destination__rating">
                         <span><i class="ri-star-fill"></i></span>
@@ -152,38 +199,6 @@
             </div>
           </div>
 
-        <!--<div class="journey__grid">
-            <div class="journey__card">
-                <div class="journey__card__bg">
-                    <span><i class="ri-bookmark-3-line"></i></span>
-                    <h4>Our Oil Refining Services</h4>
-                    <p>
-                        We specialize in professional oil refining services tailored for shops, restaurants, and small businesses. Our team efficiently collects used cooking oil and processes it using state-of-the-art technology, ensuring it is purified and ready for safe reuse or resale. We prioritize quality, hygiene, and sustainability in every step, helping your business manage waste responsibly while saving costs.
-                    </p><br><br>
-                </div>
-                <div class="journey__card__content"><br><br>
-                    <span><i class="ri-bookmark-3-line"></i></span>
-                    <h4>How We Transform Your Used Oil</h4>
-                    <p>
-                        Our process is simple yet highly effective. First, we filter and remove food particles and impurities. Next, the oil undergoes purification to restore its quality and clarity. Finally, it is tested to ensure it meets safety and usability standards. By transforming waste oil into clean, reusable oil, we help businesses reduce environmental impact while creating opportunities for recycling and reuse.
-                    </p><br><br>
-                </div>
-                <div class="journey__card__bg"><br><br>
-                    <span><i class="ri-landscape-fill"></i></span>
-                    <h4>Benefits of Oil Reclaiming</h4>
-                    <p>
-                        Choosing oil reclaiming comes with multiple advantages. It reduces hazardous waste and prevents environmental pollution, lowers disposal costs for your business, and promotes sustainable practices. Additionally, reclaimed oil can be reused safely, providing an eco-friendly solution while generating potential savings or additional revenue streams. Make a positive impact on your business and the planet simultaneously.
-                    </p><br><br>
-                </div>
-                <div class="journey__card__content"><br><br>
-                    <span><i class="ri-map-2-line"></i></span>
-                    <h4>Easy reservations, One Click Away</h4>
-                    <p>
-                        Booking our services is fast and convenient. Simply select your preferred date and time through our online platform, and our team will handle the rest. Whether it’s a one-time collection or regular pickups, our seamless booking system ensures your used oil is collected promptly and processed without any hassle, letting you focus on running your business smoothly.
-                    </p>
-                </div>
-            </div>
-        </div> -->
     </section>
 
     <section class="section__container showcase__container" id="package">
@@ -202,7 +217,7 @@
             </p>            
             <div class="showcase__btn">
                 <button class="btn">
-                    Book A Demo from here
+                    <a href="#contact" style="color: black;">Book A Demo from here</a>
                     <span><i class="ri-arrow-right-line"></i></span>
                 </button>
             </div>
@@ -212,11 +227,11 @@
 
     <section class="section__container banner__container">
         <div class="banner__card">
-            <h4>10+</h4>
+            <h4>6.5+</h4>
             <p>Years Experience</p>
         </div>
         <div class="banner__card">
-            <h4>12k</h4>
+            <h4>932</h4>
             <p>Happy Client</p>
         </div>
         <div class="banner__card">
@@ -283,10 +298,10 @@
                         </p>
                     </div>
                     <div class="client__details">
-                        <img src="assets/client_1.png" alt="client" />
+                        <img src="assets/user_angaar.jpg" alt="client" />
                         <div>
-                            <h4>John Adams</h4>
-                            <h5>Fast Food Shop Owner</h5>
+                            <h4>Sagar <h5>(Dehradun)</h5></h4>
+                            <h5>Fast Food (Angaar Shop) Owner</h5>
                         </div>
                     </div>
                 </div>
@@ -310,8 +325,8 @@
                     <div class="client__details">
                         <img src="assets/client_3.png" alt="client" />
                         <div>
-                            <h4>Sara Louise</h4>
-                            <h5>Snacks Shop Owner</h5>
+                            <h4>Sara Louise<h5>(Dehradun)</h5></h4>
+                            <h5>Street brew cafe</h5>
                         </div>
                     </div>
                 </div>
@@ -335,8 +350,8 @@
                     <div class="client__details">
                         <img src="assets/client_2.png" alt="client" />
                         <div>
-                            <h4>Bruno</h4>
-                            <h5>Hotel Owner</h5>
+                            <h4>Bruno<h5>(Dehradun)</h5></h4>
+                            <h5>Angeethi Momos</h5>
                         </div>
                     </div>
                 </div>
@@ -372,17 +387,17 @@
 
     <footer id="contact">
         <div class="section__container footer__container">
-            <form action="#">
+            <form onsubmit="sendMail(event)">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Address">
+                    <input type="text" id="name" placeholder="Full Name">
+                    <input type="email" id="email" placeholder="Email Address">
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Mobile Number">
-                    <input type="text" placeholder="Email Subject">
+                    <input type="number" id="number" placeholder="Mobile Number">
+                    <input type="text" id="text" placeholder="Email Subject">
                 </div><br>
-                <textarea name="" id="textarea" cols="40" rows="10" placeholder="Your Message"></textarea><br>
-                <input type="submit" value="Send Message" class="btn">
+                <textarea name="" id="message" cols="40" rows="10" placeholder="Your Message"></textarea><br>
+                <input type="submit" onclick="sendMail()" value="Send Message" class="btn">
             </form>
             <div class="footer__col">
                 <div class="footer__logo">
@@ -428,8 +443,11 @@
                     </li>
                     <li>
                         <a href="#">
-                            <span><i class="ri-map-pin-2-fill"></i></span> New Delhi
+                            <span><i class="ri-map-pin-2-fill"></i></span> Dehradun, Uttarakhand
                         </a>
+                    </li>
+                    <li>
+                        <img src="assets/reclaimo_logo.PNG" style="width: 250px; height: 250px;"/>
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="loginstyle.css"/>
+    <script type="module" src="signup.js" defer></script>
+</head>
+<body style="background-image: url('assets/login_page_3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="card">
+            <h2>Sign Up</h2>
+            <p class="signup" style="color: black;">Welcome! Please enter your details</p>
+
+            <form action="" method="POST">
+                <!--<div class="input-group">
+                    <label for="name">Name</label>
+                    <input class="hove" type="name" name="name" id="name" placeholder="name" required autocomplete="off">
+                </div>-->
+
+                <div class="input-group"><br><br>
+                    <label for="email">Email</label>
+                    <input class="hove" type="email" name="email" id="email" placeholder="name@gmail.com" required autocomplete="off">
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input class="hove" type="password" name="pass" id="password" placeholder="**********">
+                </div><br>
+
+                <!--<div class="option">
+                    <label>
+                        <input type="checkbox" style="font-size: 14px;">  Remeber me
+                    </label>
+                    <a href="#" style="color: blue; font-size: 14px;"> Forgot password</a>
+                </div>-->
+                <br>
+
+                <button class="btn" id="submit" type="submit">Sign Up</button>
+            </form>
+
+            <p class="signup" style="font-size: 14px; color: black;">Already have an account? <a href="login.html" style="color: blue;">Sign In</a></p>
+        </div>
+    </div>
+</body>
+</html>

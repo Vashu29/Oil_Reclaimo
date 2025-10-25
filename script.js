@@ -1,4 +1,5 @@
 const menuBtn = document.getElementById("menu-btn");
+const btn = document.getElementById("btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
@@ -86,3 +87,24 @@ const swiper = new Swiper(".swiper", {
       1024: { slidesPerView: 3 }
     }
   });
+
+
+  function sendMail(event) {
+    event.preventDefault(); // 🚫 stop form from reloading
+
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        number: document.getElementById("number").value,
+        subject: document.getElementById("text").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_evzwfua", "template_bnslb09", parms)
+    .then(function() {
+        alert("✅ Email sent successfully!");
+    })
+    .catch(function(error) {
+        alert("❌ Error: " + JSON.stringify(error));
+    });
+}

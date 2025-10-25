@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="loginstyle.css"/>
+    <script type="module" src="login.js" defer></script>
+</head>
+<body style="background-image: url('assets/login_page_3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="card">
+            <h2>Sign In</h2>
+            <p class="signin" style="color: black;">Welcome back! Please enter your details</p>
+
+            <form action="" method="POST">
+                <!--<div class="input-group">
+                    <label for="name">Name</label>
+                    <input class="hove" type="name" name="name" id="name" placeholder="name" required autocomplete="off">
+                </div>-->
+
+                <div class="input-group"><br><br>
+                    <label for="email">Email</label>
+                    <input class="hove" type="email" name="email" id="email" placeholder="name@gmail.com" required autocomplete="off">
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input class="hove" type="password" name="pass" id="password" placeholder="**********">
+                </div><br>
+
+                <!--<div class="option">
+                    <label>
+                        <input type="checkbox" style="font-size: 8px;">  Remeber me
+                    </label>
+                    <a href="#" style="color: blue;"> Forgot password</a>
+                </div>-->
+                <br>
+
+                <button class="btn" id="submit">Sign In</button>
+            </form>
+
+            <p class="signup" style="font-size: 14px; color: black;">Don't have an account? <a href="signup.html" style="color: blue;">Sign up</a><br><a href="#" id="reset" style="color: blue;">Forgot Password?</a></p>
+            
+        </div>
+    </div>
+</body>
+</html>
